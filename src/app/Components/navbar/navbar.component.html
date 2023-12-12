@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg   fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-dark fw-bolder fw-josefin fs-4 text-decoration-underline" >
+          Acción Patita
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                    *ngIf = "!isloginEst"
+                    [routerLink]="'/login'"
+                    aria-current="page">
+                    Iniciar Sesión
+                    </a>
+                </li>
+  
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                    aria-disabled="page"
+                    *ngIf = "!isloginEst"
+                    [routerLink]="'/signup'"
+                    >
+                    Registar
+                    </a>
+                </li>
+
+
+
+              <li class="nav-item navbar-brand">
+                <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                *ngIf="isloginEst && isUser()"
+                aria-disabled="page"
+                [routerLink]="'/user/'">
+                  Inicio
+                </a>
+              </li>
+
+              <li class="nav-item navbar-brand">
+                <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                *ngIf="isloginEst && isUser()"
+                aria-disabled="page"
+                [routerLink]="'/user/'">
+                Adopciones
+                </a>
+              </li>
+  
+              <li class="nav-item navbar-brand">
+                <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                *ngIf="isloginEst && isUser()"
+                aria-disabled="page"
+                [routerLink]="'/user/'">
+                  Guias
+                </a>
+              </li>
+
+              <li class="nav-item navbar-brand">
+                <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                *ngIf="isloginEst && isUser()"
+                aria-disabled="page"
+                [routerLink]="'/user/'">
+                  Nosotros
+                </a>
+              </li>
+
+              <li class="nav-item navbar-brand">
+                <a class="nav-link text-dark fw-semibold fw-josefin fs-5 text-decoration-underline"
+                *ngIf="isloginEst && isUser()"
+                aria-disabled="page"
+                [routerLink]="'/user/'">
+                  Veterinarias
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a   *ngIf="isloginEst && isAdmin()" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <img src="{{user.img}}" width="30px" height="30px" class="rounded-pill">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  [routerLink]="'/admin/perfil'">Perfil</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item fw-josefin" >Modo oscurro</a></li>
+                  <li><a class="dropdown-item fw-josefin" >Configuraciones</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item fw-josefin"    (click) = "logout()">Cerrar sesion</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a   *ngIf="isloginEst && isUser()" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <img src="{{user.img}}" width="30px" height="30px" class="rounded-pill">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item fw-josefin"  [routerLink]="">Perfil</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item fw-josefin" >Modo oscurro</a></li>
+                  <li><a class="dropdown-item fw-josefin" >Configuraciones</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item fw-josefin"    (click) = "logout()">Cerrar sesion</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  
+  

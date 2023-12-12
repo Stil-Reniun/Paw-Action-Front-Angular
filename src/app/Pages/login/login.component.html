@@ -1,0 +1,30 @@
+<div class="container mb-5">
+    <div class="row align-items-center pt-4">
+      <div class="col-md-7 text-center text-lg-start">
+        <img class="px-5" src="https://res.cloudinary.com/dxrn8ww6t/image/upload/v1702345839/Dog-PNG-12_mrqdd2.png">
+        <h1 class="text-center fw-bolder fw-viaoda">Acción Patita</h1>
+      </div>
+
+      <div class="col-md-5 mx-auto">
+        <h1 class=" fs-4 fw-bolder fw-viaoda">Inicia sesión</h1>
+        <form class="p-4 p-md-5 border rounded-3 bg-light" (ngSubmit)="formSubmit()">
+          <div class="form-floating mb-3">
+            <input required [(ngModel)]="datalogin.username" name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Correo electronico</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input required [(ngModel)]="datalogin.password" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Recordarme
+            </label>
+          </div>
+          <button type="submit" class="w-100 btn btn-lg" type="submit">Iniciar seccion</button>
+          <hr class="my-4">
+        </form>
+      </div>
+    </div>
+  </div>
+  

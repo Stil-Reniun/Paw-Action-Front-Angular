@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.btns{
+    background: #e55039aa;
+    border-radius: 25px;
+}
+
+.btns:hover{
+    background: #e55039;
+}
+
+
+.fw-josefin{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.fw-viaoda{
+    font-family: 'Viaoda Libre', serif;
+}
+

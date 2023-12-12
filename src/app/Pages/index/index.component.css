@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+.paw {
+    background-image: url("https://res.cloudinary.com/dxrn8ww6t/image/upload/v1702329023/507471b1f5da687b58f073c01f550971_nozwm4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    height:  490px;
+}
+
+.fw-viaoda{
+    font-family: 'Viaoda Libre', serif;
+}
+
+.card{
+    background-color: #a35d53aa;;
+    transition: .5s;
+    transition: all 500ms ease;
+}
+
+
+.card:hover{
+    transform: scale(1.05);
+}
